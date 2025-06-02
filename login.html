@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; height: 100vh; }
+    .login-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input { display: block; margin: 10px 0; padding: 10px; width: 100%; }
+    button { padding: 10px; width: 100%; }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Είσοδος</h2>
+    <input type="password" id="password" placeholder="Κωδικός">
+    <button onclick="checkPassword()">Είσοδος</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === "ipologistikinefous1") {
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").textContent = "Λάθος κωδικός. Προσπαθήστε ξανά.";
+      }
+    }
+  </script>
+</body>
+</html>
